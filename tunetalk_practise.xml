@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fb4ebb7a-cc3b-40f3-85f9-4a241ad15903" activeEnvironment="Default" name="tunetalk_practise" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="true"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="offlineTopUp"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="C:\Program Files (x86)\SmartBear\SoapUI-5.4.0\bin"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="true"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="a2efa59b-5570-41f2-a57b-141621803a7c" wsaVersion="NONE" name="DistProductSalePortSoapBinding" type="wsdl" bindingName="{http://msp.xius.com/DistProductSaleInterface.wsdl}DistProductSalePortSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.149.177:8180/services/DistProductSalePort?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://192.168.149.177:8180/services/DistProductSalePort?wsdl"><con:part><con:url>http://192.168.149.177:8180/services/DistProductSalePort?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://msp.xius.com/DistProductSaleInterface.wsdl" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://msp.xius.com/DistProductSaleInterface.wsdl" xmlns:intf="http://msp.xius.com/DistProductSaleInterface.wsdl" xmlns:tns1="http://msp.xius.com/DistProductSaleInterface.xsd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+  <wsdl:types>
+    <schema elementFormDefault="qualified" targetNamespace="http://msp.xius.com/DistProductSaleInterface.xsd" xmlns="http://www.w3.org/2001/XMLSchema">
+      <complexType name="RechargeRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="terminalId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="amount" type="xsd:decimal"/>
+          <element maxOccurs="1" minOccurs="0" name="currencyCode" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="channelID" type="xsd:string"/>
+          <element name="subscriberNumber" type="xsd:integer"/>
+          <element maxOccurs="1" minOccurs="0" name="subscriberAccountId" type="xsd:string"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="rechargeRequest" type="tns1:RechargeRequest"/>
+      <complexType name="RechargeResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="rechargeResponse" type="tns1:RechargeResponse"/>
+      <complexType name="RechargeInquiryRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="orgTransRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="orgTransId" type="xsd:long"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="rechargeInquiryRequest" type="tns1:RechargeInquiryRequest"/>
+      <complexType name="RechargeInquiryResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="rechargeInquiryResponse" type="tns1:RechargeInquiryResponse"/>
+      <complexType name="ReversalRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="orginatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="orgTransRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="orgTransId" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="reversalRequest" type="tns1:ReversalRequest"/>
+      <complexType name="ReversalResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="reversalResponse" type="tns1:ReversalResponse"/>
+      <complexType name="ReversalInquiryRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="orginatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="orgTransRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="orgTransId" type="xsd:long"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="reversalInquiryRequest" type="tns1:ReversalInquiryRequest"/>
+      <complexType name="ReversalInquiryResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="reversalInquiryResponse" type="tns1:ReversalInquiryResponse"/>
+      <complexType name="GetDenominationsRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="getDenominationsRequest" type="tns1:GetDenominationsRequest"/>
+      <complexType name="GetDenominationsResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element name="denominations" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="getDenominationsResponse" type="tns1:GetDenominationsResponse"/>
+      <complexType name="PurchaseProductRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="terminalId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="productId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="currencyCode" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="channelID" type="xsd:string"/>
+          <element name="subscriberNumber" type="xsd:integer"/>
+          <element maxOccurs="1" minOccurs="0" name="subscriberAccountId" type="xsd:string"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="purchaseProductRequest" type="tns1:PurchaseProductRequest"/>
+      <complexType name="PurchaseProductResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="purchaseProductResponse" type="tns1:PurchaseProductResponse"/>
+      <complexType name="PurchaseProductInquiryRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="orgTransRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="orgTransId" type="xsd:long"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="purchaseProductInquiryRequest" type="tns1:PurchaseProductInquiryRequest"/>
+      <complexType name="PurchaseProductInquiryResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="purchaseProductInquiryResponse" type="tns1:PurchaseProductInquiryResponse"/>
+      <complexType name="GetProductsRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="getProductsRequest" type="tns1:GetProductsRequest"/>
+      <complexType name="GetProductsResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element name="products" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="getProductsResponse" type="tns1:GetProductsResponse"/>
+      <complexType name="OfflineTopUpRequest">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="distId" type="xsd:string"/>
+          <element name="originatorDistId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="salesPersonId" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="terminalId" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="amount" type="xsd:decimal"/>
+          <element maxOccurs="1" minOccurs="0" name="currencyCode" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="channelID" type="xsd:string"/>
+          <element name="subscriberNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="subscriberAccountId" type="xsd:string"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="offlineTopUpRequest" type="tns1:OfflineTopUpRequest"/>
+      <complexType name="OfflineTopUpResponse">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="offlineTopUpResponse" type="tns1:OfflineTopUpResponse"/>
+      <complexType name="OfflineTopUpV1Request">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distributorNumber" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="amount" type="xsd:decimal"/>
+          <element maxOccurs="1" minOccurs="0" name="currencyCode" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="channelID" type="xsd:string"/>
+          <element name="subscriberNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="subscriberAccountId" type="xsd:string"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="offlineTopUpV1Request" type="tns1:OfflineTopUpV1Request"/>
+      <complexType name="OfflineTopUpV1Response">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="offlineTopUpV1Response" type="tns1:OfflineTopUpV1Response"/>
+      <complexType name="RechargeV1Request">
+        <sequence>
+          <element name="operatorId" type="xsd:string"/>
+          <element name="distributorNumber" type="xsd:string"/>
+          <element name="transactionPassword" type="xsd:base64Binary"/>
+          <element name="amount" type="xsd:decimal"/>
+          <element maxOccurs="1" minOccurs="0" name="currencyCode" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="channelID" type="xsd:string"/>
+          <element name="subscriberNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="subscriberAccountId" type="xsd:string"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element name="transDate" type="xsd:string"/>
+          <element name="transTime" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput1" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput2" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalInput3" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="rechargeV1Request" type="tns1:RechargeV1Request"/>
+      <complexType name="RechargeV1Response">
+        <sequence>
+          <element name="transStatus" type="xsd:int"/>
+          <element name="respCode" type="xsd:int"/>
+          <element name="respDescription" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="transID" type="xsd:long"/>
+          <element name="transRefNumber" type="xsd:string"/>
+          <element maxOccurs="1" minOccurs="0" name="additionalOutput1" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="rechargeV1Response" type="tns1:RechargeV1Response"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="offlineTopUpResponse">
+    <wsdl:part element="tns1:offlineTopUpResponse" name="offlineTopUpResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getProductsRequest">
+    <wsdl:part element="tns1:getProductsRequest" name="getProductsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="doReversalRequest">
+    <wsdl:part element="tns1:reversalRequest" name="reversalRequest"/>
+  </wsdl:message>
+  <wsdl:message name="doReversalResponse">
+    <wsdl:part element="tns1:reversalResponse" name="reversalResponse"/>
+  </wsdl:message>
+  <wsdl:message name="doRechargeV1Response">
+    <wsdl:part element="tns1:rechargeV1Response" name="rechargeV1Response"/>
+  </wsdl:message>
+  <wsdl:message name="getDenominationsResponse">
+    <wsdl:part element="tns1:getDenominationsResponse" name="getDenominationsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="purchaseProductResponse">
+    <wsdl:part element="tns1:purchaseProductResponse" name="purchaseProductResponse"/>
+  </wsdl:message>
+  <wsdl:message name="doRechargeV1Request">
+    <wsdl:part element="tns1:rechargeV1Request" name="rechargeV1Request"/>
+  </wsdl:message>
+  <wsdl:message name="doRechargeRequest">
+    <wsdl:part element="tns1:rechargeRequest" name="rechargeRequest"/>
+  </wsdl:message>
+  <wsdl:message name="offlineTopUpV1Request">
+    <wsdl:part element="tns1:offlineTopUpV1Request" name="offlineTopUpV1Request"/>
+  </wsdl:message>
+  <wsdl:message name="purchaseProductInquiryRequest">
+    <wsdl:part element="tns1:purchaseProductInquiryRequest" name="purchaseProductInquiryRequest"/>
+  </wsdl:message>
+  <wsdl:message name="offlineTopUpRequest">
+    <wsdl:part element="tns1:offlineTopUpRequest" name="offlineTopUpRequest"/>
+  </wsdl:message>
+  <wsdl:message name="offlineTopUpV1Response">
+    <wsdl:part element="tns1:offlineTopUpV1Response" name="offlineTopUpV1Response"/>
+  </wsdl:message>
+  <wsdl:message name="doRechargeInquiryRequest">
+    <wsdl:part element="tns1:rechargeInquiryRequest" name="rechargeInquiryRequest"/>
+  </wsdl:message>
+  <wsdl:message name="doRechargeResponse">
+    <wsdl:part element="tns1:rechargeResponse" name="rechargeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="doRechargeInquiryResponse">
+    <wsdl:part element="tns1:rechargeInquiryResponse" name="rechargeInquiryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="purchaseProductRequest">
+    <wsdl:part element="tns1:purchaseProductRequest" name="purchaseProductRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getDenominationsRequest">
+    <wsdl:part element="tns1:getDenominationsRequest" name="getDenominationsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="doReversalInquiryRequest">
+    <wsdl:part element="tns1:reversalInquiryRequest" name="reversalInquiryRequest"/>
+  </wsdl:message>
+  <wsdl:message name="doReversalInquiryResponse">
+    <wsdl:part element="tns1:reversalInquiryResponse" name="reversalInquiryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="purchaseProductInquiryResponse">
+    <wsdl:part element="tns1:purchaseProductInquiryResponse" name="purchaseProductInquiryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getProductsResponse">
+    <wsdl:part element="tns1:getProductsResponse" name="getProductsResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="DistProductSalePortType">
+    <wsdl:operation name="doRecharge" parameterOrder="rechargeRequest">
+      <wsdl:input message="impl:doRechargeRequest" name="doRechargeRequest"/>
+      <wsdl:output message="impl:doRechargeResponse" name="doRechargeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="doRechargeInquiry" parameterOrder="rechargeInquiryRequest">
+      <wsdl:input message="impl:doRechargeInquiryRequest" name="doRechargeInquiryRequest"/>
+      <wsdl:output message="impl:doRechargeInquiryResponse" name="doRechargeInquiryResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="doReversal" parameterOrder="reversalRequest">
+      <wsdl:input message="impl:doReversalRequest" name="doReversalRequest"/>
+      <wsdl:output message="impl:doReversalResponse" name="doReversalResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="doReversalInquiry" parameterOrder="reversalInquiryRequest">
+      <wsdl:input message="impl:doReversalInquiryRequest" name="doReversalInquiryRequest"/>
+      <wsdl:output message="impl:doReversalInquiryResponse" name="doReversalInquiryResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getDenominations" parameterOrder="getDenominationsRequest">
+      <wsdl:input message="impl:getDenominationsRequest" name="getDenominationsRequest"/>
+      <wsdl:output message="impl:getDenominationsResponse" name="getDenominationsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="purchaseProduct" parameterOrder="purchaseProductRequest">
+      <wsdl:input message="impl:purchaseProductRequest" name="purchaseProductRequest"/>
+      <wsdl:output message="impl:purchaseProductResponse" name="purchaseProductResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="purchaseProductInquiry" parameterOrder="purchaseProductInquiryRequest">
+      <wsdl:input message="impl:purchaseProductInquiryRequest" name="purchaseProductInquiryRequest"/>
+      <wsdl:output message="impl:purchaseProductInquiryResponse" name="purchaseProductInquiryResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getProducts" parameterOrder="getProductsRequest">
+      <wsdl:input message="impl:getProductsRequest" name="getProductsRequest"/>
+      <wsdl:output message="impl:getProductsResponse" name="getProductsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="offlineTopUp" parameterOrder="offlineTopUpRequest">
+      <wsdl:input message="impl:offlineTopUpRequest" name="offlineTopUpRequest"/>
+      <wsdl:output message="impl:offlineTopUpResponse" name="offlineTopUpResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="offlineTopUpV1" parameterOrder="offlineTopUpV1Request">
+      <wsdl:input message="impl:offlineTopUpV1Request" name="offlineTopUpV1Request"/>
+      <wsdl:output message="impl:offlineTopUpV1Response" name="offlineTopUpV1Response"/>
+    </wsdl:operation>
+    <wsdl:operation name="doRechargeV1" parameterOrder="rechargeV1Request">
+      <wsdl:input message="impl:doRechargeV1Request" name="doRechargeV1Request"/>
+      <wsdl:output message="impl:doRechargeV1Response" name="doRechargeV1Response"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DistProductSalePortSoapBinding" type="impl:DistProductSalePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="doRecharge">
+      <wsdlsoap:operation soapAction="doRecharge"/>
+      <wsdl:input name="doRechargeRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doRechargeResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doRechargeInquiry">
+      <wsdlsoap:operation soapAction="doRechargeInquiry"/>
+      <wsdl:input name="doRechargeInquiryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doRechargeInquiryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doReversal">
+      <wsdlsoap:operation soapAction="doReversal"/>
+      <wsdl:input name="doReversalRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doReversalResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doReversalInquiry">
+      <wsdlsoap:operation soapAction="doReversalInquiry"/>
+      <wsdl:input name="doReversalInquiryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doReversalInquiryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDenominations">
+      <wsdlsoap:operation soapAction="getDenominations"/>
+      <wsdl:input name="getDenominationsRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDenominationsResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purchaseProduct">
+      <wsdlsoap:operation soapAction="purchaseProduct"/>
+      <wsdl:input name="purchaseProductRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="purchaseProductResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="purchaseProductInquiry">
+      <wsdlsoap:operation soapAction="purchaseProductInquiry"/>
+      <wsdl:input name="purchaseProductInquiryRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="purchaseProductInquiryResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProducts">
+      <wsdlsoap:operation soapAction="getProducts"/>
+      <wsdl:input name="getProductsRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductsResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="offlineTopUp">
+      <wsdlsoap:operation soapAction="offlineTopUp"/>
+      <wsdl:input name="offlineTopUpRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="offlineTopUpResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="offlineTopUpV1">
+      <wsdlsoap:operation soapAction="offlineTopUpV1"/>
+      <wsdl:input name="offlineTopUpV1Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="offlineTopUpV1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doRechargeV1">
+      <wsdlsoap:operation soapAction="doRechargeV1"/>
+      <wsdl:input name="doRechargeV1Request">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doRechargeV1Response">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DistProductSaleServices">
+    <wsdl:port binding="impl:DistProductSalePortSoapBinding" name="DistProductSalePort">
+      <wsdlsoap:address location="http://192.168.149.177:8180/services/DistProductSalePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint></con:endpoints><con:operation id="3d156b99-9e69-4512-a34c-cc07584530e8" isOneWay="false" action="doRecharge" name="doRecharge" bindingOperationName="doRecharge" type="Request-Response" outputName="doRechargeResponse" inputName="doRechargeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4c6ba1a2-2f8d-494c-a243-e45967d92600" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:rechargeRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId>?</dis:terminalId>\r
+         <dis:transactionPassword>cid:1495787747382</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:rechargeRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="doRecharge"/></con:call></con:operation><con:operation id="e5238f2b-f83f-42e9-b678-a8f800175383" isOneWay="false" action="doRechargeInquiry" name="doRechargeInquiry" bindingOperationName="doRechargeInquiry" type="Request-Response" outputName="doRechargeInquiryResponse" inputName="doRechargeInquiryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e70452cd-958a-4953-8e32-dffa8ba98267" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:rechargeInquiryRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:1370774146318</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:rechargeInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="doRechargeInquiry"/></con:call></con:operation><con:operation id="831653a9-6095-49e5-a274-d0b8f5b91227" isOneWay="false" action="doRechargeV1" name="doRechargeV1" bindingOperationName="doRechargeV1" type="Request-Response" outputName="doRechargeV1Response" inputName="doRechargeV1Request" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="28730ec2-5fb1-43de-9afb-103b93f9e37f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:rechargeV1Request>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distributorNumber>?</dis:distributorNumber>\r
+         <dis:transactionPassword>cid:1105680358692</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:rechargeV1Request>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="doRechargeV1"/></con:call></con:operation><con:operation id="ead0086a-3ea5-4497-b750-79e19ef6e929" isOneWay="false" action="doReversal" name="doReversal" bindingOperationName="doReversal" type="Request-Response" outputName="doReversalResponse" inputName="doReversalRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dfe12eac-43e2-4c9f-a285-d3d90a5a0782" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:reversalRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:orginatorDistId>?</dis:orginatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:133055244882</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:reversalRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="doReversal"/></con:call></con:operation><con:operation id="8d7189ea-9ffc-4e45-85bc-6a16c6331cb8" isOneWay="false" action="doReversalInquiry" name="doReversalInquiry" bindingOperationName="doReversalInquiry" type="Request-Response" outputName="doReversalInquiryResponse" inputName="doReversalInquiryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0321b148-0bd4-48ba-b8c6-2658693d60a5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:reversalInquiryRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:orginatorDistId>?</dis:orginatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:994585186799</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:reversalInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="doReversalInquiry"/></con:call></con:operation><con:operation id="9a8038c5-6938-44dd-b6a3-89fdba6db580" isOneWay="false" action="getDenominations" name="getDenominations" bindingOperationName="getDenominations" type="Request-Response" outputName="getDenominationsResponse" inputName="getDenominationsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7c33a7fa-5cbd-4fe9-a98f-5ce49f842d12" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:getDenominationsRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:371959061411</dis:transactionPassword>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:getDenominationsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="getDenominations"/></con:call></con:operation><con:operation id="544a8680-8d14-4c52-95d6-d7f52e1d024d" isOneWay="false" action="getProducts" name="getProducts" bindingOperationName="getProducts" type="Request-Response" outputName="getProductsResponse" inputName="getProductsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="29e09b23-dbf2-4be8-b535-485d85e860ff" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:getProductsRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:17000822297</dis:transactionPassword>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:getProductsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="getProducts"/></con:call></con:operation><con:operation id="4a226fce-0372-47f1-9ab9-572a367da884" isOneWay="false" action="offlineTopUp" name="offlineTopUp" bindingOperationName="offlineTopUp" type="Request-Response" outputName="offlineTopUpResponse" inputName="offlineTopUpRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8568a81b-9a3f-4833-b471-3a74e6887365" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <!--Optional:-->\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId>?</dis:terminalId>\r
+         <dis:transactionPassword>cid:1001876929142</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:offlineTopUpRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="offlineTopUp"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="9878224f-36df-43e4-b6d1-2ecf64a927bf" isOneWay="false" action="offlineTopUpV1" name="offlineTopUpV1" bindingOperationName="offlineTopUpV1" type="Request-Response" outputName="offlineTopUpV1Response" inputName="offlineTopUpV1Request" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9d2613e4-c4e7-4252-8d11-379802be6521" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpV1Request>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distributorNumber>?</dis:distributorNumber>\r
+         <dis:transactionPassword>cid:655748176418</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:offlineTopUpV1Request>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="offlineTopUpV1"/></con:call></con:operation><con:operation id="081dd2f5-3b57-44b9-b2dd-a37e2eee95c5" isOneWay="false" action="purchaseProduct" name="purchaseProduct" bindingOperationName="purchaseProduct" type="Request-Response" outputName="purchaseProductResponse" inputName="purchaseProductRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7bf92450-6a14-4aaf-81fd-48f73c4629b8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:purchaseProductRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId>?</dis:terminalId>\r
+         <dis:transactionPassword>cid:1116999217796</dis:transactionPassword>\r
+         <dis:productId>?</dis:productId>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:purchaseProductRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="purchaseProduct"/></con:call></con:operation><con:operation id="45c61751-b445-4069-84b1-2abc2448e83f" isOneWay="false" action="purchaseProductInquiry" name="purchaseProductInquiry" bindingOperationName="purchaseProductInquiry" type="Request-Response" outputName="purchaseProductInquiryResponse" inputName="purchaseProductInquiryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2acfba1f-a387-45e5-a4b8-a532508bd7ab" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:purchaseProductInquiryRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:1178749290811</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:purchaseProductInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="purchaseProductInquiry"/></con:call></con:operation></con:interface><con:testSuite id="f3551f09-eefc-4649-ad9b-4ffc957a2c7e" name="DistProductSalePortSoapBinding"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4ce4ac87-4287-4914-bf9c-4a36148837c9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="doRecharge TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="77ae6614-dacd-4089-8642-8cd3d6780b6d" name="doRecharge"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>doRecharge</con:operation><con:request name="doRecharge" id="a2a573ee-d717-42aa-8d28-6c2df9111ded"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:rechargeRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId>?</dis:terminalId>\r
+         <dis:transactionPassword>cid:1564154588936</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:rechargeRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="doRecharge" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="598216fb-cfd1-4c98-9136-8bdd69fd9484" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="doRechargeInquiry TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="2f26d010-de3f-4620-96c0-9d8aa41d8204" name="doRechargeInquiry"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>doRechargeInquiry</con:operation><con:request name="doRechargeInquiry" id="b6c78068-bd17-4b0d-85f8-8b17f3aa8fff"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:rechargeInquiryRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:147000159065</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:rechargeInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="doRechargeInquiry" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="02ac3410-8ea5-4601-a174-0785269c10c2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="doRechargeV1 TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="176d4d4b-f494-459d-a286-4912f91a60b1" name="doRechargeV1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>doRechargeV1</con:operation><con:request name="doRechargeV1" id="4fc56e8b-b3b5-4351-b784-d8d6307d4e50"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:rechargeV1Request>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distributorNumber>?</dis:distributorNumber>\r
+         <dis:transactionPassword>cid:1510041191677</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:rechargeV1Request>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="doRechargeV1" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="c2b1e54f-0284-41b9-a01a-43bca3be547b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="doReversal TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="2dfe741b-06dd-4df4-8a96-614d8606d1ff" name="doReversal"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>doReversal</con:operation><con:request name="doReversal" id="10edfe48-8206-4b68-b1ef-863ea5eeaadb"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:reversalRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:orginatorDistId>?</dis:orginatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:1544287083598</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:reversalRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="doReversal" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="35f0eb73-9cb1-4b16-98ea-4b6af7811f24" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="doReversalInquiry TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="cab1635a-b0be-4a28-b0ed-f3c5e1f2e5f4" name="doReversalInquiry"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>doReversalInquiry</con:operation><con:request name="doReversalInquiry" id="af3ede27-579f-4cc0-b8d3-3e7f66a11597"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:reversalInquiryRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:orginatorDistId>?</dis:orginatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:1251843468715</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:reversalInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="doReversalInquiry" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9eed1b85-8f8e-45b4-9673-fdc662e7e978" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getDenominations TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="b6b4c84e-4d94-4eff-8599-7318cda03608" name="getDenominations"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>getDenominations</con:operation><con:request name="getDenominations" id="7d0e1930-15a6-43e4-9dbe-2636d8390bdc"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:getDenominationsRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:698622012010</dis:transactionPassword>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:getDenominationsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="getDenominations" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9b303961-6fbf-4a6d-968a-7f124dd4f5fa" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getProducts TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="d6afc13c-c9c9-4d0c-9c27-52eb192cc48a" name="getProducts"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>getProducts</con:operation><con:request name="getProducts" id="912f2147-0659-4724-8a00-975de6f7a803"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:getProductsRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:226000228359</dis:transactionPassword>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:getProductsRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="getProducts" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="bc3b9d10-a13e-4edb-bdde-074faf38d4cb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="offlineTopUp TestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="875c6353-594d-4254-a724-1bf58d0cd334"><con:settings/><con:config><script>long number = (long) Math.floor(Math.random() * 900000000L) + 100000000L
+log.info number
+return number</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="6e25e119-b107-4220-b331-95c241af8d70"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>amount</con:name><con:value>10</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="092cc837-45d0-4674-9d26-c6af30a872d7" name="offlineTopUp"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>offlineTopUp</con:operation><con:request name="offlineTopUp" id="78de18c0-3810-4d81-9bc6-bf6fbbf10bfe"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpRequest>\r
+         <dis:operatorId>1</dis:operatorId>\r
+         <!--Optional:-->\r
+         <dis:distId>9918</dis:distId>\r
+         <dis:originatorDistId>9918</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId></dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId></dis:terminalId>\r
+         <dis:transactionPassword>${#TestSuite#transpassword}</dis:transactionPassword>\r
+         <dis:amount>${Properties#amount}</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode></dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID></dis:channelID>\r
+         <dis:subscriberNumber>${#TestCase#subscrbrnmbr}</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId></dis:subscriberAccountId>\r
+         <dis:transRefNumber>${Groovy Script#result}</dis:transRefNumber>\r
+         <dis:transDate>02042020</dis:transDate>\r
+         <dis:transTime>1010</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:offlineTopUpRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="XPath Match" id="2b0a90d8-160c-4acf-85de-95f6d18c15d8" name="XPath Match"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="offlineTopUp" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="randomnmbr" id="858a5a10-73cf-495b-8344-8cbe990c745a"><con:settings/><con:config><script>long number = (long) Math.floor(Math.random() * 900000000L) + 100000000L
+log.info number
+return number</script></con:config></con:testStep><con:testStep type="request" name="OfflineTopUpV1" id="4600b53b-4f4c-4738-b6fb-14f5823c1549"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>offlineTopUpV1</con:operation><con:request name="OfflineTopUpV1" id="18d9db6e-a180-4f66-a95a-a1aa8fc97274"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpV1Request>\r
+         <dis:operatorId>1</dis:operatorId>\r
+         <dis:distributorNumber>9918</dis:distributorNumber>\r
+         <dis:transactionPassword>${#TestSuite#transpassword}</dis:transactionPassword>\r
+         <dis:amount>1</dis:amount>\r
+         <dis:subscriberNumber>${#TestCase#subscrbrnmbr}</dis:subscriberNumber>\r
+         <dis:transRefNumber>${randomnmbr#result}</dis:transRefNumber>\r
+         <dis:transDate>05042020</dis:transDate>\r
+         <dis:transTime>1010</dis:transTime>\r
+      </dis:offlineTopUpV1Request>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b92858d6-25ed-4950-bb5e-1bd60e9d669c"/><con:assertion type="Schema Compliance" id="7a2808d1-1990-4058-a4be-bb1b98b48bca"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>subscrbrnmbr</con:name><con:value>1135533727</con:value></con:property></con:properties></con:testCase><con:testCase id="0649db38-4b01-452c-987e-d4fc94b6732f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="offlineTopUpV1 TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="1b696367-7ba1-4592-b492-b5d69a8b5e4c" name="offlineTopUpV1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>offlineTopUpV1</con:operation><con:request name="offlineTopUpV1" id="a2016745-a6a8-4802-a3f1-fd00ef74a4d5"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpV1Request>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distributorNumber>?</dis:distributorNumber>\r
+         <dis:transactionPassword>cid:254622087222</dis:transactionPassword>\r
+         <dis:amount>?</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:offlineTopUpV1Request>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="offlineTopUpV1" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="07e48ce5-9ca4-498c-825f-2dd672e84bbf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="purchaseProduct TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="51037ee7-6531-4f3d-a4f3-c32e07c55d6d" name="purchaseProduct"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>purchaseProduct</con:operation><con:request name="purchaseProduct" id="0e9b5acc-85ca-4bb1-8e00-525dccb10e2b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:purchaseProductRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId>?</dis:terminalId>\r
+         <dis:transactionPassword>cid:624287021143</dis:transactionPassword>\r
+         <dis:productId>?</dis:productId>\r
+         <!--Optional:-->\r
+         <dis:currencyCode>?</dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID>?</dis:channelID>\r
+         <dis:subscriberNumber>?</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId>?</dis:subscriberAccountId>\r
+         <dis:transRefNumber>?</dis:transRefNumber>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:purchaseProductRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="purchaseProduct" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7119e84e-f419-486a-8a0e-57feb43f3fb5" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="purchaseProductInquiry TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="a5c4a8d7-31b1-49c6-933c-9b5cc02a871a" name="purchaseProductInquiry"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>purchaseProductInquiry</con:operation><con:request name="purchaseProductInquiry" id="6fc8eaea-13de-4021-a614-77b20e47fe30"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:purchaseProductInquiryRequest>\r
+         <dis:operatorId>?</dis:operatorId>\r
+         <dis:distId>?</dis:distId>\r
+         <dis:originatorDistId>?</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId>?</dis:salesPersonId>\r
+         <dis:transactionPassword>cid:557773286094</dis:transactionPassword>\r
+         <dis:orgTransRefNumber>?</dis:orgTransRefNumber>\r
+         <!--Optional:-->\r
+         <dis:orgTransId>?</dis:orgTransId>\r
+         <dis:transDate>?</dis:transDate>\r
+         <dis:transTime>?</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1>?</dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2>?</dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3>?</dis:additionalInput3>\r
+      </dis:purchaseProductInquiryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig action="purchaseProductInquiry" mustUnderstand="NONE" version="200508"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>transpassword</con:name><con:value>dGVzdDEyMzQ=</con:value></con:property><con:property><con:name>subscrbrnmbr</con:name><con:value>1135533727</con:value></con:property></con:properties></con:testSuite><con:testSuite id="70d74400-3eda-4b7a-8f7a-81ec24c36dbd" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b9ed66f8-cb0c-4caf-bf55-0b63c6e0389f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="offlineTopUp" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="4819f4e2-1e30-4d1f-87c0-90350c510aa0"><con:settings/><con:config><script>import com.eviware.soapui.model.testsuite.TestStepResult.TestStepStatus
+import com.eviware.soapui.model.testsuite.TestRunner.Status
+import com.eviware.soapui.SoapUI
+
+long transRefNumber = (long) Math.floor(Math.random() * 900000000L) + 100000000L
+
+testRunner.testCase.testSuite.setPropertyValue("TransRefNumber", transRefNumber.toString() )</script></con:config></con:testStep><con:testStep type="request" id="a6734f64-81f3-4e07-a4c0-19fd31bb3215" name="offlineTopUp"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>offlineTopUp</con:operation><con:request name="offlineTopUp" id="78de18c0-3810-4d81-9bc6-bf6fbbf10bfe"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpRequest>\r
+         <dis:operatorId>1</dis:operatorId>\r
+         <!--Optional:-->\r
+         <dis:distId>9918</dis:distId>\r
+         <dis:originatorDistId>9918</dis:originatorDistId>\r
+         <!--Optional:-->\r
+         <dis:salesPersonId></dis:salesPersonId>\r
+         <!--Optional:-->\r
+         <dis:terminalId></dis:terminalId>\r
+         <dis:transactionPassword>dGVzdDEyMzQ=</dis:transactionPassword>\r
+         <dis:amount>3</dis:amount>\r
+         <!--Optional:-->\r
+         <dis:currencyCode></dis:currencyCode>\r
+         <!--Optional:-->\r
+         <dis:channelID></dis:channelID>\r
+         <dis:subscriberNumber>1050110600</dis:subscriberNumber>\r
+         <!--Optional:-->\r
+         <dis:subscriberAccountId></dis:subscriberAccountId>\r
+         <dis:transRefNumber>${#TestSuite#TransRefNumber}</dis:transRefNumber>\r
+         <dis:transDate>02042020</dis:transDate>\r
+         <dis:transTime>1010</dis:transTime>\r
+         <!--Optional:-->\r
+         <dis:additionalInput1></dis:additionalInput1>\r
+         <!--Optional:-->\r
+         <dis:additionalInput2></dis:additionalInput2>\r
+         <!--Optional:-->\r
+         <dis:additionalInput3></dis:additionalInput3>\r
+      </dis:offlineTopUpRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="963a90d4-9a2c-4ff9-aff4-bbe22a94505e" name="Contains"><con:configuration><token>success</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="offlineTopUp" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="OfflineTopUpV1" id="b8696991-a4e0-43b2-bafe-a388834216c3" disabled="true"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DistProductSalePortSoapBinding</con:interface><con:operation>offlineTopUpV1</con:operation><con:request name="OfflineTopUpV1" id="18d9db6e-a180-4f66-a95a-a1aa8fc97274"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.149.177:8180/services/DistProductSalePort</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dis="http://msp.xius.com/DistProductSaleInterface.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <dis:offlineTopUpV1Request>\r
+         <dis:operatorId>1</dis:operatorId>\r
+         <dis:distributorNumber>1231454564</dis:distributorNumber>\r
+         <dis:transactionPassword>dGVzdDEyMzQ=</dis:transactionPassword>\r
+         <dis:amount>1</dis:amount>\r
+         <dis:subscriberNumber>1050110600</dis:subscriberNumber>\r
+         <dis:transRefNumber>852</dis:transRefNumber>\r
+         <dis:transDate>05042020</dis:transDate>\r
+         <dis:transTime>1010</dis:transTime>\r
+      </dis:offlineTopUpV1Request>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b92858d6-25ed-4950-bb5e-1bd60e9d669c"/><con:assertion type="Schema Compliance" id="7a2808d1-1990-4058-a4be-bb1b98b48bca"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>subscrbrnmbr</con:name><con:value>1135533727</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>TransRefNumber</con:name><con:value>121498839</con:value></con:property></con:properties></con:testSuite><con:testSuite id="528dc0ef-d18e-4cba-82d6-92bf97087f68" name="TestSuite 2"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="7e08c535-7fb1-4317-8588-1642e21d6bfb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="44f66225-db1f-4b69-8111-a6f63eff34b5"><con:settings/><con:config><script>def suite=context.testCase.testSuite.project.testSuites["TestSuite"]
+suite.run(null,false)
+// null can be replaced with : new com.eviware.soapui.support.types.StringToObjectMap()
+log.info ("   ===   "+suite.getName().toString()+" - Executed successfully")</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>operatorid</con:name><con:value>1</con:value></con:property><con:property><con:name>TransRefNumber</con:name><con:value>521703775</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
